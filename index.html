@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>시범 페이지</title>
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <div id="header">
+    <div id="header-content">
+      <p>성함을 기입해주세요.</p>
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+    </div>
+
+    <h3>체크박스</h3> 
+    <p>당신의 소속 대학을 선택해주세요</p>
+
+    <div id="checkbox1">
+      <h4>질문 1</h4>
+      <label><input type="checkbox" name="option1"> 사범대학</label><br>
+      <label><input type="checkbox" name="option1"> 공과대학</label><br>
+      <label><input type="checkbox" name="option1"> 사회과학대학</label><br>
+      <label><input type="checkbox" name="option1"> 자연과학대학</label><br>
+      <label><input type="checkbox" name="option1"> 기타</label><br>
+    </div>
+    
+    <div id="checkbox2">
+      <h4>자신이 비교과 프로그램을 지원한다면 가장 중요하게 보는 것은?</h4>
+      <label><input type="checkbox" name="option2"> 취업</label><br>
+      <label><input type="checkbox" name="option2"> 학업</label><br>
+      <label><input type="checkbox" name="option2"> 건강/스포츠</label><br>
+      <label><input type="checkbox" name="option2"> 친구/인맥</label><br>
+      <label><input type="checkbox" name="option2"> 기타</label><br>
+    </div>
+
+    <div id="checkbox3">
+      <h4>평소에 관심 있는 분야는 </h4>
+      <label><input type="checkbox" name="option3"> 공예/디자인</label><br>
+      <label><input type="checkbox" name="option3"> 과학/기술</label><br>
+      <label><input type="checkbox" name="option3"> 스포츠/건강</label><br>
+      <label><input type="checkbox" name="option3"> 음악/예술</label><br>
+      <label><input type="checkbox" name="option3"> 기타</label><br>
+    </div>
+    <br>
+
+    <button type="button" onclick="makeTable(), saveToGoogleSheet()">선택된 옵션 확인</button>
+  </div>
+
+ 
+
+</body>
+</html>
