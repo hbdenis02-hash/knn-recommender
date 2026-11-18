@@ -1,5 +1,6 @@
 
-    const table = {};
+    const x_table = {};
+    const y_table = {};
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyx48rf9IWEp-d0OjpiKaVjRuCrkF2olFQY7pTjlOhp6OKpx-y6etLicW7O0Djrlx1X/exec";
 
     function getCheckedValues(questionName) {
@@ -18,15 +19,26 @@
       const q1 = getCheckedValues('option1');
       const q2 = getCheckedValues('option2');
       const q3 = getCheckedValues('option3');
+      const q4 = getCheckedValues('option4');
+      const q5 = getCheckedValues('option5'); 
+      const a1 = getCheckedValues('answer');
 
-      table[userName] = {
+      x_table[userName] = {
         질문1: q1,
         질문2: q2,
-        질문3: q3
+        질문3: q3,
+        질문4: q4,
+        질문5: q5
       };
 
-      alert(`${userName}님의 선택이 저장되었습니다!\n질문1: [${q1}]\n질문2: [${q2}]\n질문3: [${q3}]`);
-      console.table(table);
+     y_table[userName] ={
+         target: a1
+             
+     }
+
+      alert(`${userName}님의 선택이 저장되었습니다!\n질문1: [${q1}]\n질문2: [${q2}]\n질문3: [${q3}]\n질문4: [${q4}]\n질문5:[${q5}]\n 핵심질문: [${a1}]);
+      console.table(x_table);
+      console.table(y_table);
     }
 
     async function saveToGoogleSheet() {
@@ -40,8 +52,14 @@
       const q1 = getCheckedValues('option1');
       const q2 = getCheckedValues('option2');
       const q3 = getCheckedValues('option3');
+      const q4 = getCheckedValues('option4');
+      const q5 = getCheckedValues('option5');
+      const a1 = getCheckedValues('answer');
 
-      const rowData = [userName, ...q1, ...q2, ...q3];
+      const rowData_1= [userName, ...q1, ...q2, ...q3, ...q4, ...q5];
+      const rowData_2 = [userName,...a1];
+
+    
 
       try {
         const response = await fetch(GOOGLE_SCRIPT_URL, {
@@ -50,7 +68,9 @@
             "Content-Type": "text/plain;charset=utf-8
           },
           body: JSON.stringify({
-            row: rowData
+            row1: rowData_1,
+            row2 : rowData_2
+            
           })
         });
 
