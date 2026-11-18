@@ -11,23 +11,51 @@
   <div id="header">
     <div id="header-content">
       <p>성함을 기입해주세요.</p>
-      <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요"> 
+      <p>*본 설문조사는 대학교 재학생 휴학생 대상입니다</p>
     </div>
 
     <h3>체크박스</h3> 
-    <p>당신의 소속 대학을 선택해주세요</p>
 
-    <div id="checkbox1">
-      <h4>질문 1</h4>
+
+    <div id=checkbox">
+      <h4>* 본인의 신분을 선택해주세요.</h4>
+      <label><input type="checkbox" name="option">재학생</label>
+      <label><input type="checkbox" name="option">휴학생</label>
+      <label><input type='checkbox' name ="option>졸업생</label>
+    </div>
+          
+    <div id=checkbox">
+      <h4>* 본인의 학년을 선택해주세요.</h4>
+      <label><input type="checkbox" name="option">1학년</label>
+      <label><input type="checkbox" name="option">2학년</label>
+      <label><input type='checkbox' name ="option>3학년</label>
+      <label><input type='checkbox' name ="option>4학년</label>
+    </div>
+
+     <div id=checkbox">
+      <h4>* 본인의 학년을 선택해주세요.</h4>
+      <label><input type="checkbox" name="option">1학년</label>
+      <label><input type="checkbox" name="option">2학년</label>
+      <label><input type='checkbox' name ="option>3학년</label>
+      <label><input type='checkbox' name ="option>4학년</label>
+    </div>
+
+               
+
+
+    <div id="checkbox">
+      <h4>Q1. 당신의 소속 대학을 선택해주세요</h4>
       <label><input type="checkbox" name="option1"> 사범대학</label><br>
       <label><input type="checkbox" name="option1"> 공과대학</label><br>
       <label><input type="checkbox" name="option1"> 사회과학대학</label><br>
       <label><input type="checkbox" name="option1"> 자연과학대학</label><br>
-      <label><input type="checkbox" name="option1"> 기타</label><br>
+      <label><input type="checkbox" name="option1"> 인문콘텐츠학부</label><br>
+      <label><input type="checkbox" name="option1></label>
     </div>
     
-    <div id="checkbox2">
-      <h4>자신이 비교과 프로그램을 지원한다면 가장 중요하게 보는 것은?</h4>
+    <div id="checkbox">
+      <h4>Q2. 자신이 비교과 프로그램을 지원한다면 가장 중요하게 보는 것은?</h4>
       <label><input type="checkbox" name="option2"> 취업</label><br>
       <label><input type="checkbox" name="option2"> 학업</label><br>
       <label><input type="checkbox" name="option2"> 건강/스포츠</label><br>
@@ -35,7 +63,7 @@
       <label><input type="checkbox" name="option2"> 기타</label><br>
     </div>
 
-    <div id="checkbox3">
+    <div id="checkbox">
       <h4>평소에 관심 있는 분야는 </h4>
       <label><input type="checkbox" name="option3"> 공예/디자인</label><br>
       <label><input type="checkbox" name="option3"> 과학/기술</label><br>
@@ -43,6 +71,18 @@
       <label><input type="checkbox" name="option3"> 음악/예술</label><br>
       <label><input type="checkbox" name="option3"> 기타</label><br>
     </div>
+
+
+    <div id="checkbox">
+      <h4>본인이 이 중에서 관심이어하는 비교과 활동 프로그램에는? </h4>
+      <label><input type="checkbox" name="option3"> (기초)AI를 활용한 실전 사용법</label><br>
+      <label><input type="checkbox" name="option3"> (글쓰기 특강)내 ChatGPT만 왜 그럴까</label><br>
+      <label><input type="checkbox" name="option3"> 2026_2학기_신직업 멘토링 </label><br>
+      <label><input type="checkbox" name="option3"> 퍼스널퍼퓸"나를 표현하는 향"</label><br>
+      <label><input type="checkbox" name="option3"> 기타</label><br>
+    </div>
+
+    
     <br>
 
     <button type="button" onclick="makeTable(), saveToGoogleSheet()">선택된 옵션 확인</button>
