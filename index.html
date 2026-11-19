@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>비교과 프로그램 추천 설문</title>
+</head>
+<body>
+
+  <div>
+    <h2>비교과 프로그램 맞춤 추천 설문</h2>
+    <p>각 질문에 해당하는 항목을 체크한 뒤, 마지막에 가장 참여하고 싶은 비교과 프로그램 1개를 선택해 주세요.</p>
+
+    <!-- 질문 1 (학습_x) -->
+    <div id="checkbox1">
+      <h4>* Q1. 본인의 신분을 선택해주세요.</h4>
+     <label><input type="checkbox" name="option1" onclick="selectONE(this)"> 재학생</label>
+      <label><input type="checkbox" name="option1" onclick="selectONE(this)"> 휴학생</label>
+      <label><input type="checkbox" name="option1" onclick="selectONE(this)"> 졸업생</label>
+    </div>
+
+    <!-- 질문 2 (학습_x) -->
+    <div id="checkbox2">
+    <h4>* Q2. 본인의 학년을 선택해주세요.</h4>
+      <label><input type="checkbox" name="option2" onclick="selectONE(this)"> 1학년</label><br>
+      <label><input type="checkbox" name="option2" onclick="selectONE(this)"> 2학년</label><br>
+      <label><input type="checkbox" name="option2" onclick="selectONE(this)"> 3학년</label><br>
+      <label><input type="checkbox" name="option2" onclick="selectONE(this)"> 4학년</label><br>
+    </div>
+
+    <!-- 질문 3 (학습_x) -->
+    <div id="checkbox3">
+      <h4>* Q3. 당신의 소속 대학을 선택해주세요</h4>
+      <label><input type="checkbox" name="option3" onclick="selectONE(this)"> 사범대학</label><br>
+      <label><input type="checkbox" name="option3" onclick="selectONE(this)"> 공과대학</label><br>
+      <label><input type="checkbox" name="option3" onclick="selectONE(this)"> 인문대학</label><br>
+      <label><input type="checkbox" name="option3" onclick="selectONE(this)"> 사회과학대학</label><br>
+      <label><input type="checkbox" name="option3" onclick="selectONE(this)"> 자연과학대학</label><br>
+      <label><input type="checkbox" name="option3" onclick="selectONE(this)"> 예술대학</label><br>
+    </div>
+
+    <!-- 질문 4 (학습_x) -->
+    <div id="checkbox4">
+      <h4>* Q4.자신이 비교과를 선택하는데 있어 중요하게 보는 건</h4>
+      <label><input type="checkbox" name="option4" onclick="selectONE(this)"> 취업</label><br>
+      <label><input type="checkbox" name="option4" onclick="selectONE(this)"> 학업</label><br>
+      <label><input type="checkbox" name="option4" onclick="selectONE(this)"> 건강/스포츠</label><br>
+      <label><input type="checkbox" name="option4" onclick="selectONE(this)"> 친구/인맥</label><br>
+      <label><input type="checkbox" name="option4" onclick="selectONE(this)"> 기타</label><br>
+    </div>
+
+    <!-- 질문 5 (학습_x) -->
+    <div id="checkbox5">
+    <h4>* Q5. 평소에 관심 있는 분야는?</h4>
+      <label><input type="checkbox" name="option5" onclick="selectONE(this)"> 공예/디자인</label><br>
+      <label><input type="checkbox" name="option5" onclick="selectONE(this)"> 과학/기술</label><br>
+      <label><input type="checkbox" name="option5" onclick="selectONE(this)"> 스포츠/건강</label><br>
+      <label><input type="checkbox" name="option5" onclick="selectONE(this)"> 음악/예술</label><br>
+      <label><input type="checkbox" name="option5" onclick="selectONE(this)"> 기타</label><br>
+    </div>
+
+    <!-- 정답 선택 (학습_y): script.js가 자동으로 5개 랜덤 비교과 프로그램 제목을 채워 넣습니다 -->
+    <div id="answerBox">
+      <h4>*  Q6. 추천 비교과 프로그램 (가장 마음에 드는 1개만 선택)</h4>
+      <label><input type="checkbox" name="answer" onclick="selectONE(this)"> 로딩 중...</label><br>
+      <label><input type="checkbox" name="answer" onclick="selectONE(this)"> 로딩 중...</label><br>
+      <label><input type="checkbox" name="answer" onclick="selectONE(this)"> 로딩 중...</label><br>
+      <label><input type="checkbox" name="answer" onclick="selectONE(this)"> 로딩 중...</label><br>
+      <label><input type="checkbox" name="answer" onclick="selectONE(this)"> 로딩 중...</label><br>
+    </div>
+
+    <br>
+    <!-- 제출 버튼 -->
+    <button type="button" onclick="submitSurvey()">제출하기</button>
+  </div>
+
+  <!-- 같은 폴더의 script.js 연결 -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
